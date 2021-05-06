@@ -29,7 +29,7 @@ CROMEDRIVER_LATEST_VERSION_PATTERN = re.compile(
 )
 
 # Global variables
-chromedriver_version = 91.0.4472.19
+chromedriver_version = '91.0.4472.19'
 chromedriver_checksums = 'fake-checksum'
 # chromedriver_version = None
 # chromedriver_checksums = None
@@ -57,7 +57,8 @@ class BuildScripts(build_scripts):
         if plat.startswith('macos'):
             os_ = 'mac'
             # Only 64 bit architecture is available for mac since version 2.23
-            architecture = 64 if float(chromedriver_version) >= 2.23 else 32
+            # architecture = 64 if float(chromedriver_version) >= 2.23 else 32
+            architecture = 64
         elif plat.startswith('linux'):
             os_ = 'linux'
             architecture = platform.architecture()[0][:-3]
