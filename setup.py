@@ -52,7 +52,7 @@ class BuildScripts(build_scripts):
 
     def _download(self, zip_path, validate=False):
         plat = platform.platform().lower()
-        if plat.startswith('darwin'):
+        if plat.startswith('macos'):
             os_ = 'mac'
             # Only 64 bit architecture is available for mac since version 2.23
             architecture = 64 if float(chromedriver_version) >= 2.23 else 32
