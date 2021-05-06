@@ -93,12 +93,12 @@ class BuildScripts(build_scripts):
         if not download_ok:
             print('\t - download failed!')
 
-        if validate:
-            if not self._validate(zip_path):
-                raise Exception("The checksum of the downloaded file '{0}' "
-                                "matches none of the checksums {1}!"
-                                .format(zip_path,
-                                        ', '.join(chromedriver_checksums)))
+#         if validate:
+#             if not self._validate(zip_path):
+#                 raise Exception("The checksum of the downloaded file '{0}' "
+#                                 "matches none of the checksums {1}!"
+#                                 .format(zip_path,
+#                                         ', '.join(chromedriver_checksums)))
 
     def _unzip(self, zip_path):
         zf = zipfile.ZipFile(zip_path)
