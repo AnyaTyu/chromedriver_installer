@@ -29,7 +29,7 @@ CROMEDRIVER_LATEST_VERSION_PATTERN = re.compile(
 )
 
 # Global variables
-chromedriver_version = '91.0.4472.19'
+chromedriver_version = 91.0.4472.19
 chromedriver_checksums = 'fake-checksum'
 # chromedriver_version = None
 # chromedriver_checksums = None
