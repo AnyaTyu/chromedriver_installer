@@ -37,14 +37,15 @@ def get_chromedriver_version():
     """Retrieves the most recent chromedriver version."""
     global chromedriver_version
 
-    response = request.urlopen(CHROMEDRIVER_INFO_URL)
-    content = response.read()
-    match = CROMEDRIVER_LATEST_VERSION_PATTERN.search(str(content))
-    if match:
-        return match.group(1)
-    else:
-        raise Exception('Unable to get latest chromedriver version from {0}'
-                        .format(CHROMEDRIVER_INFO_URL))
+    return '91.0.4472.19'  
+#     response = request.urlopen(CHROMEDRIVER_INFO_URL)
+#     content = response.read()
+#     match = CROMEDRIVER_LATEST_VERSION_PATTERN.search(str(content))
+#     if match:
+#         return match.group(1)
+#     else:
+#         raise Exception('Unable to get latest chromedriver version from {0}'
+#                         .format(CHROMEDRIVER_INFO_URL))
 
 
 class BuildScripts(build_scripts):
